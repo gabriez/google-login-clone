@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faCaretDown} from '@fortawesome/free-solid-svg-icons';
+import {faCaretDown, faCaretUp} from '@fortawesome/free-solid-svg-icons';
 
 import { useEffect, useRef, useState } from 'react';
 
@@ -68,9 +68,9 @@ export default function DropdownMenu({listOptions, onSelect}: Props) {
       <button 
         ref={buttonRef}
         onClick={toggleDropDown} 
-        className='bg-whiteBg w-40 px-2 py-1 text-sm text-black rounded-md flex justify-between items-center gap-2 cursor-pointer focus:bg-light-gray'>
+        className='bg-inherit w-40 px-2 py-1 text-sm text-black rounded-md flex justify-between items-center gap-2 cursor-pointer focus:bg-blueBg'>
         {selected}
-        <FontAwesomeIcon icon={faCaretDown} className='text-black'/>
+        <FontAwesomeIcon icon={isOpen ? faCaretUp : faCaretDown} className='text-black'/>
       </button>  
 
       {/* Dropdown menu */}
