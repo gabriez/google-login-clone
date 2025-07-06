@@ -2,4 +2,10 @@
 
 @theme {
   --font-roboto: Roboto, sans-serif;
+
+  --color-light-gray: #F0F4F9;
+  --color-whiteBg: #FFFFFF;
+  --color-blue-acc: #0b57d0;
+  --color-blue-dark: #0E4EB5;
+  --color-blueBg: #F5F8FD;
 }
