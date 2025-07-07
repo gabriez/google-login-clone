@@ -1,12 +1,16 @@
-import { useState } from "react";
 import googleLogo from "../assets/google-logo.png";
 import TextField from "../components/TextField";
 import TextButton from "../components/TextButton";
 import FilledButton from "../components/FilledButton";
 import Footer from "../components/Footer";
 
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 export default function SignInEmail() {
   const [email, setEmail] = useState("");
+
+  const navigate = useNavigate();
 
   const handleEmailChange = (value: string): void => {
     setEmail(value);
@@ -18,6 +22,7 @@ export default function SignInEmail() {
 
   const handleSubmitClick = ():void => {
     console.log("Next");
+    navigate("/password");
   }
 
   return (
