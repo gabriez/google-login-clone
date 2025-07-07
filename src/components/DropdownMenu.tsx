@@ -68,22 +68,22 @@ export default function DropdownMenu({listOptions, onSelect}: Props) {
       <button 
         ref={buttonRef}
         onClick={toggleDropDown} 
-        className='bg-inherit w-40 px-2 py-1 text-sm text-black rounded-md flex justify-between items-center gap-2 cursor-pointer hover:bg-hoverBg'>
+        className='bg-inherit w-40 px-2 py-1 text-sm text-black rounded-md flex justify-between items-center gap-2 cursor-pointer hover:bg-hoverBg dark:hover:bg-dark-black-hover dark:text-white'>
         {selected}
-        <FontAwesomeIcon icon={isOpen ? faCaretUp : faCaretDown} className='text-black'/>
+        <FontAwesomeIcon icon={isOpen ? faCaretUp : faCaretDown} className='text-black dark:text-white'/>
       </button>  
 
       {/* Dropdown menu */}
       {
         isOpen && 
-        <div className={`absolute w-48 z-50 origin-top-right bg-white shadow-lg border border-gray-200 rounded ${dropUp ? "bottom-full mb-2" : "mt-2 top-full"}`}>
+        <div className={`absolute w-48 z-50 origin-top-right bg-white shadow-lg border border-gray-200 rounded ${dropUp ? "bottom-full mb-2" : "mt-2 top-full"} dark:bg-dark-menu`}>
           <ul className='max-h-60 overflow-y-auto'>
             {
               listOptions.map((option, index) => (
                 <li 
                   key={index} 
                   onClick={() => handleSelect(option)}
-                  className='px-4 py-2 text-sm text-black cursor-pointer hover:bg-blueBg'>
+                  className='px-4 py-2 text-sm text-black cursor-pointer hover:bg-blueBg dark:text-white dark:hover:bg-dark-black-hover'>
                   {option}
                 </li>
               )) 

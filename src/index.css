@@ -9,4 +9,15 @@
   --color-blue-acc: #0b57d0;
   --color-blue-dark: #0E4EB5;
   --color-blueBg: #F5F8FD;
+
+  /* Dark Colors */
+  --color-darkBg: #1E1F20;
+  --color-dark-second: #0E0E0E;
+  --color-dark-blue: #8AB4F8;
+  --color-dark-blue-hover: #A8C7FA;
+  --color-dark-text: #062E6F;
+  --color-dark-hover: #141517;
+  --color-dark-black-hover: #2C2D2D;
+  --color-dark-menu: #37383B;
+  --color-dark-gray: #BDC1C6;
 }

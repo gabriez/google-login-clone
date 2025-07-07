@@ -26,9 +26,9 @@ export default function SignInPassword() {
   }
   
   return (
-    <section className="h-screen font-roboto bg-light-gray sm:flex sm:flex-col sm:justify-center sm:items-center">
+    <section className="h-screen font-roboto bg-light-gray sm:flex sm:flex-col sm:justify-center sm:items-center dark:bg-darkBg">
       {/* Card */}
-      <div className="h-full w-full bg-whiteBg p-6 flex flex-col justify-between sm:w-md sm:h-fit sm:rounded-3xl lg:p-10 lg:w-4xl xl:w-5xl">
+      <div className="h-full w-full bg-whiteBg p-6 flex flex-col justify-between sm:w-md sm:h-fit sm:rounded-3xl lg:p-10 lg:w-4xl xl:w-5xl dark:bg-dark-second dark:text-white">
         {/* Input Container */}
         <div>
           {/* Logo */}
@@ -52,7 +52,7 @@ export default function SignInPassword() {
             </div>
 
             <div className="lg:mt-8 lg:w-full">
-              <p className="text-sm text-black font-roboto">
+              <p className="text-sm text-black font-roboto dark:text-white">
                 To continue, first verify it's you
               </p>
 

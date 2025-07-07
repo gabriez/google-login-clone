@@ -26,9 +26,9 @@ export default function SignInEmail() {
   }
 
   return (
-    <section className="font-roboto h-screen bg-light-gray sm:flex sm:flex-col sm:justify-center sm:items-center">
+    <section className="font-roboto h-screen bg-light-gray sm:flex sm:flex-col sm:justify-center sm:items-center dark:bg-darkBg">
       {/* Card */}
-      <div className="h-full w-full bg-whiteBg p-6 flex flex-col justify-between sm:w-md sm:h-fit sm:rounded-3xl lg:rounded-3xl lg:p-10 lg:w-4xl xl:w-5xl">
+      <div className="h-full w-full bg-whiteBg p-6 flex flex-col justify-between sm:w-md sm:h-fit sm:rounded-3xl lg:rounded-3xl lg:p-10 lg:w-4xl xl:w-5xl dark:bg-dark-second dark:text-white">
         {/* Input Container*/}
         <div>
           <div>
@@ -49,12 +49,12 @@ export default function SignInEmail() {
             <div className="lg:mt-8">
               <TextField label="Email or phone" value={email} onChange={handleEmailChange} />
 
-              <button className="p-0.5 mt-2 text-sm text-blue-acc font-medium rounded-lg cursor-pointer hover:bg-blueBg">
+              <button className="p-0.5 mt-2 text-sm text-blue-acc font-medium rounded-lg cursor-pointer hover:bg-blueBg dark:text-dark-blue dark:hover:bg-dark-hover">
                 Forgot email?
               </button>
 
-              <p className="mt-10 text-sm text-black tracking-wide">
-                Not your computer? Use Private Browsing windows to sign in. <span className="text-blue-acc font-medium cursor-pointer hover:underline">
+              <p className="mt-10 text-sm text-black tracking-wide dark:text-white">
+                Not your computer? Use Private Browsing windows to sign in. <span className="text-blue-acc font-medium cursor-pointer hover:underline dark:text-dark-blue">
                   Learn more about using Guest mode
                 </span>
               </p>
