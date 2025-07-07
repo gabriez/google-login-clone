@@ -68,7 +68,7 @@ export default function DropdownMenu({listOptions, onSelect}: Props) {
       <button 
         ref={buttonRef}
         onClick={toggleDropDown} 
-        className='bg-inherit w-40 px-2 py-1 text-sm text-black rounded-md flex justify-between items-center gap-2 cursor-pointer focus:bg-blueBg'>
+        className='bg-inherit w-40 px-2 py-1 text-sm text-black rounded-md flex justify-between items-center gap-2 cursor-pointer hover:bg-hoverBg'>
         {selected}
         <FontAwesomeIcon icon={isOpen ? faCaretUp : faCaretDown} className='text-black'/>
       </button>  
