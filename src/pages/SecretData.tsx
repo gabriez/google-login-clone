@@ -10,9 +10,6 @@ const SecretData = () => {
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState<null | string>(null);
 
-	// Mock API_URL for demo - replace with your actual constant
-	const API_URL = "http://localhost:3000";
-
 	const deleteUsers = async () => {
 		try {
 			setLoading(true);
