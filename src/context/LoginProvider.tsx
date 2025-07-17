@@ -1,7 +1,11 @@
 import { useState, type ReactNode } from "react";
 import { LoginContext } from "./LoginContext";
+import axios from "axios";
+import { API_URL } from "../const.tsx";
+import { useNavigate } from "react-router-dom";
 
 export const LoginContextProvider = ({ children }: { children: ReactNode }) => {
+	const navigation = useNavigate();
 	const [login, setLogin] = useState({
 		email: "",
 		password: "",
@@ -16,20 +20,22 @@ export const LoginContextProvider = ({ children }: { children: ReactNode }) => {
 			[name]: value,
 		}));
 	};
-	console.log(login);
+
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		setLoading(true);
 
 		try {
 			console.log("Login submitted", login);
+			console.log("API URL:", API_URL);
+			let { data } = await axios.post(`${API_URL}/login`, {
+				email: login.email,
+				password: login.password,
+			});
 			// Add your authentication logic here
-
-			// Simulate API call
-			await new Promise((resolve) => setTimeout(resolve, 1000));
+			navigation("/hacked"); // Simulate API call
 
 			// Handle successful login
-			console.log("Login successful!");
 		} catch (error) {
 			console.error("Login failed:", error);
 		} finally {

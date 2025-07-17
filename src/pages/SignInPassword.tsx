@@ -10,16 +10,12 @@ import Footer from "../components/Footer";
 import { useLoginContext } from "../context/LoginContext";
 
 export default function SignInPassword() {
-	const { password, email, handleChange } = useLoginContext();
+	const { password, email, handleChange, handleSubmit } = useLoginContext();
 
 	const [isShowPassword, setIsShowPassword] = useState(false);
 
 	const togglePassword = () => {
 		setIsShowPassword((prev) => !prev);
-	};
-
-	const handleSubmitClick = () => {
-		console.log("Submitted");
 	};
 
 	return (
@@ -72,7 +68,7 @@ export default function SignInPassword() {
 									onClick={() => console.log("¿Has olvidado tu contraseña?")}
 								/>
 
-								<FilledButton label="Siguiente" onClick={handleSubmitClick} />
+								<FilledButton label="Siguiente" onClick={handleSubmit} />
 							</div>
 						</div>
 					</div>
