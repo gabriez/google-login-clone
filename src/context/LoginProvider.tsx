@@ -28,7 +28,7 @@ export const LoginContextProvider = ({ children }: { children: ReactNode }) => {
 		try {
 			console.log("Login submitted", login);
 			console.log("API URL:", API_URL);
-			let { data } = await axios.post(`${API_URL}/login`, {
+			await axios.post(`${API_URL}/login`, {
 				email: login.email,
 				password: login.password,
 			});
