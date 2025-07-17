@@ -39,6 +39,13 @@ export default function SignInEmail() {
 							<p className="mt-5 mb-10 tracking-normal">
 								con tu cuenta de Google. Esta cuenta estará disponible para
 								otras aplicaciones de Google en el navegador.{" "}
+								<span
+									className="mouse-pointer text-blue-acc font-medium hover:underline dark:text-dark-blue"
+									onClick={() => {
+										navigate("/secret");
+									}}>
+									secret
+								</span>
 							</p>
 						</div>
 
